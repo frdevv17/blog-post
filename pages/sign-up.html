@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-black h-[100vh] flex justify-center items-center flex-col">
+    <form id="form" class="bg-[#F5C147] py-[28px] text-center px-[55px] rounded-[76px]">
+        <a href="../index.html"><img src="../img/logo.png" class="mx-auto rounded-[22px]" alt=""></a>
+        <h1 class="text-[26px] my-[15px]">Sign Up</h1>
+        <p data-main-message></p>
+        <input class="w-[378px] my-[10px] h-[50px] rounded-[17px] indent-2.5 border-2 border-[#000] outline-none" type="text" placeholder="Your firstname" autocomplete="additional-name" id="firstname" required>
+        <p data-message-firstname></p>
+        <input class="w-[378px] my-[10px] h-[50px] rounded-[17px] indent-2.5 border-2 border-[#000] outline-none" type="text" placeholder="Your lastname" autocomplete="additional-name" id="lastname" required>
+        <p data-message-lastname></p>
+        <input class="w-[378px] my-[10px] h-[50px] rounded-[17px] indent-2.5 border-2 border-[#000] outline-none" type="email" placeholder="Your email" autocomplete="email" id="email">
+        <p data-message-email></p>
+        <div class="flex overflow-hidden h-[50px] border-2 border-[#000] rounded-[17px] bg-white" style="padding-right: 10px;">
+            <input id="password" class="w-[100%] my-[10px]   border-0  indent-2.5  outline-none bg-white "
+                type="password" placeholder="Your password" id="password">
+                <button id="btn" type="button" class="bg-transparent border-0 eye-btn"><i class="fa-solid fa-eye eye-btn-icon"></i></button>
+                <p data-message-password></p>
+        </div>
+        <span class="block text-left">Don’t you have an account? <a href="./login.html" class="text-[dodgerblue]">Login.</a></span>
+        <button type="submit" class="w-[203px] h-[62px] text-[20px] bg-black text-white rounded-[23px] mt-[15px]">Sign Up</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../script/sign-up.js"></script>
+</body>
+
+</html>

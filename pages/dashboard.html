@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+    <div class="wrapper-center">
+        <div class="dashboard-wrapper">
+            <aside class="dashboard w-[330px] ">
+                <h2>Dashboard</h2>
+                <a href="../index.html" class="dashboard-user">
+                    <img src="../img/author.svg" alt="">
+                    <div class="dashboard-user-name">
+                        <h3>Ibrokhim Jalalov</h3>
+                        <strong>Author</strong>
+                    </div>
+                </a>
+                <ul class="post-pages">
+                    <a href="./dashboard.html?page=create" class="creat-post">Create Post</a>
+                    <a  href="./dashboard.html?page=manage" class="manage-post">Manage Posts</a>
+                </ul>
+                <button class="sign-out">Sign Out?</button>
+                
+            </aside>
+            <main>
+                <div data-content-name="create" id="create-content" class="creat-post-wrapper">
+                    <h2>Create New Post</h2>
+                    <form>
+                        <label>Post title</label>
+                        <input type="text">
+                        <label>Post image</label>
+                        <div class="creat-post-input-wrapper">
+                            <input type="text">
+                            <select>
+                                <option>Select post category</option>
+                            </select>
+                        </div>
+                        <label>Post description</label>
+                        <textarea></textarea>
+                        <button type="submit"
+                            style="padding: 15px; font-size: 18px; background-color: #F5C147; border: none; border-radius: 10px; cursor: pointer;">Create
+                            Post</button>
+                    </form>
+                    
+                </div>
+                <div data-content-name="manage" id="manage-content" class="manage-posts " style="margin-left: 400px;">
+                <h1 class="mt-[30px] text-[30px] pb-[10px]  ">Manage posts</h1>
+                    <div class="posts-section py-[40px] border-t-2 border-gray-500">
+                        <div class="posts grid grid-cols-3 gap-[53px] ">
+                            
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="popup-modal">
+                <div id="popup" class="popup">
+                    <div>
+                        <span class="close-popup">x</span>
+                    </div>
+                    <h1>Sign Out?</h1>
+                    <p>Do you want to Sign Out? Really?</p>
+                    <a href="../index.html" class="signOutBtn">Sign Out</a>
+                </div>
+            </div>
+            <div class="delete-modal">
+                <div id="delete-popup" class="delete-popup">
+                    <div>
+                        <span class="close-delete">x</span>
+                    </div>
+                    <h1>Delete Post?</h1>
+                    <p>Are you sure to delete this post</p>
+                    <button  class="deleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="../script/dashboard.js"></script>
+</body>
+
+</html>

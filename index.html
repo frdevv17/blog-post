@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  </head>
+  <body>  
+    <header class="bg-black">
+      <nav class="">
+        <div
+          class="w-[1240px] m-auto flex justify-between items-center py-[17px]"
+        >
+          <a href="./index.html"><img src="./img/logo.png" class="w-[188px] h-[44px]" alt="" /></a>
+          <div>
+            <ul class="nav-ul text-white flex gap-[43px] text-[18px] mt-[20px]">
+              <li>
+                <a href="./pages/login.html">Log In</a>
+              </li>
+              <li>
+                <a href="./pages/sign-up.html">Sign Up</a>
+              </li>
+            
+            </ul>
+            <li>
+              <a class="hidden dashboard-link text-[18px] mt-[-15px] text-white"
+                href="./pages/dashboard.html?page=create">Dashboard</a>
+            </li>
+          </div>
+        </div>
+      </nav>
+
+      <div class="showcase">
+        <img src="./img/showcase.png" class="w-[100%]" alt="" />
+      </div>
+      <div class="w-[1240px] h-[500px] m-auto">
+        <div class="posts-section ">
+            <h1 class="text-white text-3xl mt-[30px]">All articles</h1>
+            <div class="posts">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper flex gap-[53px]">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        cssMode: true,
+      mousewheel: true,
+          keyboard: true,
+      });
+    </script>
+
+    <script src="./script/main.js"></script>
+  </body>
+</html>

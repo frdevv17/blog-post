@@ -1,0 +1,38 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.posts {
+    position: relative;
+}
+
+.swiper {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.swiper-slide {
+    text-align: center;
+    /* background: dodgerblue; */
+    color: white;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

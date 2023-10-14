@@ -1,0 +1,273 @@
+body {
+  background: #000;
+  position: relative;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  gap: 50px;
+  font-family: Jomolhari;
+}
+.dashboard-wrapper aside {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+  position: fixed;
+  height: 95vh;
+  margin: 1rem auto;
+  border-radius: 30px;
+  background: #F5C147;
+  padding: 0 35px;
+  padding-top: 30px;
+}
+.dashboard-wrapper aside h2 {
+  text-align: center;
+  font-size: 30px;
+}
+.dashboard-wrapper aside .dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #fff;
+  padding: 12px 35px 12px 18px;
+  border-radius: 22px;
+}
+.dashboard-wrapper aside .dashboard-user img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.dashboard-wrapper aside .dashboard-user .dashboard-user-name strong {
+  color: gray;
+}
+.dashboard-wrapper aside .dashboard-user .dashboard-user-name h3 {
+  color: #000;
+}
+.dashboard-wrapper aside ul .creat-post, .dashboard-wrapper aside .manage-post {
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 22px;
+  padding: 20px 30px;
+  margin: 20px 0;
+  font-size: 18px;
+  transition: 0.2s;
+  display: block;
+  color: black;
+}
+.dashboard-wrapper aside ul .creat-post:hover, .dashboard-wrapper aside .manage-post:hover {
+  background-color: black;
+  color: white;
+}
+.dashboard-wrapper aside .post-pages a[aria-current=page] {
+  background-color: black;
+  color: #fff;
+}
+.dashboard-wrapper aside .sign-out {
+  font-size: 20px;
+  margin-top: 150px;
+  text-align: center;
+  padding-bottom: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: -20px;
+}
+.dashboard-wrapper .creat-post-wrapper {
+  padding-top: 35px;
+  width: 1024px;
+  margin-left: 400px;
+}
+.dashboard-wrapper .creat-post-wrapper h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  border-bottom: 1px solid gray;
+  padding: 16px 0;
+}
+.dashboard-wrapper .creat-post-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-wrapper .creat-post-wrapper form label {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0;
+}
+.dashboard-wrapper .creat-post-wrapper form input,
+.dashboard-wrapper .creat-post-wrapper form select,
+.dashboard-wrapper .creat-post-wrapper form textarea {
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.dashboard-wrapper .creat-post-wrapper form input,
+.dashboard-wrapper .creat-post-wrapper form select {
+  padding: 13px 12px;
+  outline: none;
+  font-size: 18px;
+  font-family: Jomolhari;
+}
+.dashboard-wrapper .creat-post-wrapper form .creat-post-input-wrapper {
+  display: flex;
+  gap: 28px;
+}
+.dashboard-wrapper .creat-post-wrapper form .creat-post-input-wrapper input {
+  flex: 1;
+}
+.dashboard-wrapper .creat-post-wrapper form textarea {
+  height: 172px;
+}
+
+#create-content, #manage-content {
+  display: none;
+}
+
+#manage-content {
+  margin-left: 350px;
+  color: #fff;
+}
+
+.popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 270px;
+  padding: 50px;
+  background-color: #F5C147;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.popup h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+}
+.popup p {
+  font-size: 20px;
+}
+.popup a {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 50px;
+  border-radius: 10px;
+}
+.popup div {
+  position: relative;
+}
+.popup span {
+  position: absolute;
+  right: -200px;
+  top: -20px;
+  font-size: 24px;
+  padding: 0px 12px 2px 12px;
+  cursor: pointer;
+  transform: translateY(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.popup-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.435);
+}
+
+.popup-modal.active {
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}
+
+.delete-popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 270px;
+  padding: 50px;
+  background-color: #F5C147;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.delete-popup h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+}
+.delete-popup p {
+  font-size: 20px;
+}
+.delete-popup button {
+  cursor: pointer;
+  background-color: #000;
+  color: #F5C147;
+  font-size: 20px;
+  padding: 15px 50px;
+  border-radius: 10px;
+}
+.delete-popup div {
+  position: relative;
+}
+.delete-popup span {
+  position: absolute;
+  right: -200px;
+  top: -20px;
+  font-size: 24px;
+  padding: 0px 12px 2px 12px;
+  cursor: pointer;
+  transform: translateY(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.delete-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.435);
+}
+
+.delete-modal.active {
+  width: 100vw;
+  height: 100vh;
+}
+
+.delete-popup.active {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}/*# sourceMappingURL=dashboard.css.map */
